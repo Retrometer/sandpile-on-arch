@@ -1,4 +1,4 @@
-# sandpile-on-arch
+# SandPile on Arch Linux
 The repository with SandPile install script
 
 How to run:
