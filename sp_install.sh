@@ -11,7 +11,7 @@ cd $SANDPILE_PATH
 mkdir client
 cd client
 # Download Player.exe
-wget https://brkcdn.com/client/Player.exe
+wget https://sandpile.xyz/static/Player.exe
 
 cd ..
 
