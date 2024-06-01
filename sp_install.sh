@@ -1,12 +1,12 @@
 #!/bin/bash
 
-BRICK_HILL_PATH="$HOME/legacy-brick-hill"
-CLIENT_BINARY="$BRICK_HILL_PATH/client/Player.exe"
-WINE_PREFIX="$BRICK_HILL_PATH/.brick-hill-prefix"
+SANDPILE_PATH="$HOME/sandpile"
+CLIENT_BINARY="$SANDPILE_PATH/client/Player.exe"
+WINE_PREFIX="$SANDPILE_PATH/.sandpile-prefix"
 
-mkdir $BRICK_HILL_PATH
+mkdir $SANDPILE_PATH
 
-cd $BRICK_HILL_PATH
+cd $SANDPILE_PATH
 
 mkdir client
 cd client
@@ -17,23 +17,23 @@ cd ..
 
 # Register brickhill.legacy protocol
 DESKTOP_FILE="[Desktop Entry]
-Name=Brick Hill
+Name=SandPile
 NoDisplay=true
-Exec=$BRICK_HILL_PATH/launcher.sh %u
+Exec=$SANDPILE_PATH/launcher.sh %u
 Type=Application
 Terminal=false
-MimeType=x-scheme-handler/brickhill.legacy;"
+MimeType=x-scheme-handler/sandpile.legacy;"
 
-echo "$DESKTOP_FILE" > ~/.local/share/applications/legacy-brick-hill.desktop
+echo "$DESKTOP_FILE" > ~/.local/share/applications/sandpile.desktop
 
-xdg-mime default legacy-brick-hill.desktop x-scheme-handler/brickhill.legacy
+xdg-mime default sandpile.desktop x-scheme-handler/sandpile.legacy
 
 # Create launcher
 touch launcher.sh
 chmod +x ./launcher.sh
 
 echo "#!/bin/bash
-LAUNCH_OPTIONS=\${1##brickhill.legacy://client/}
+LAUNCH_OPTIONS=\${1##sandpile.legacy://client/}
 CLIENT_BINARY=$CLIENT_BINARY
 WINEPREFIX=$WINE_PREFIX wine \$CLIENT_BINARY \$LAUNCH_OPTIONS
 " > launcher.sh
