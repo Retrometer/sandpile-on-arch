@@ -1,3 +1,4 @@
+#!/bin/bash
 # if one of both of the following errors appear:
 # /home/<NAME>/.local/share/applications/sandpile.desktop doesn't exist
 # qtpaths not found
