@@ -7,3 +7,5 @@ wget https://raw.githubusercontent.com/Retrometer/sandpile-on-arch/main/sp_insta
 chmod +x ./sp_install.sh
 ./sp_install.sh
 sudo pacman -Sy wine-staging
+```
+
